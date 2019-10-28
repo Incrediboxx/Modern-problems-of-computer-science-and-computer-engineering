@@ -20,6 +20,15 @@ class Circle : public Figure {
 	Point center;
 	int rad;
 public:
-	Circle(Point center, int pad, int color);
+	Circle(Point center, int rad, int color);
 	virtual double place() const;
 };
+
+class Triangle : public Figure {
+	Point	p1, p2, p3;
+public:	
+	Triangle(Point p1, Point p2, Point p3, int color);
+	virtual double place() const;
+};
+
+#endif
