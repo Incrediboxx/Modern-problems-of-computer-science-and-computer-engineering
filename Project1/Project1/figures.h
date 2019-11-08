@@ -1,5 +1,7 @@
 #pragma once
 
+#include <vector>
+
 #ifndef __FIGURES_H		
 #define __FIGURES_H	
 
@@ -28,6 +30,13 @@ class Triangle : public Figure {
 	Point	p1, p2, p3;
 public:	
 	Triangle(Point p1, Point p2, Point p3, int color);
+	virtual double place() const;
+};
+
+class Polygon : public Figure {
+	std::vector<Point> pVector;
+public:
+	Polygon(std::vector<Point> pVector, int color);
 	virtual double place() const;
 };
 
