@@ -10,6 +10,14 @@ double Circle::place() const {
 #endif
 	return M_PI * rad * rad;
 }
+double Circle::perimetr() const {
+	return 2 * M_PI * rad;
+}
+std::ostream& operator<<(std::ostream &out, const Circle &circle) {
+	out << "<Circle: x=" << circle.center.x << " ,y=" << circle.center.y << " ,r=" << circle.rad << " ,color =" << circle.color;
+	return out;
+}
+
 
 Triangle::Triangle(Point p1, Point p2, Point p3, int color) : Figure(color), p1(p1), p2(p2), p3(p3) {}
 double Triangle::place() const {
@@ -19,8 +27,20 @@ double Triangle::place() const {
 	double ans = 0.5 * ((p1.x - p3.x) * (p2.y - p3.y) - (p2.x - p3.x) * (p1.y - p3.y));
 	return abs(ans);
 }
+double Triangle::perimetr() const {
+	return sqrt(pow((p1.x - p2.x), 2) + pow((p1.y - p2.y), 2)) + sqrt(pow((p2.x - p3.x), 2) + pow((p2.y - p3.y), 2))
+		+ sqrt(pow((p3.x - p1.x), 2) + pow((p3.y - p1.y), 2));
+}
 
-Polygon::Polygon(std::vector<Point> pVector, int color): Figure(color), pVector(pVector) {}
+
+
+
+Polygon::Polygon(int pArray[],int n, int color): Figure(color) {
+	for (size_t i = 0; i < n-2; i+2)
+	{
+		pVector.push_back(Point(pArray[i], pArray[i + 1]));
+	}
+}
 double Polygon::place() const {
 #ifdef _DEBUG	
 	std::cerr << "In Polygon::place() \n";
@@ -35,4 +55,20 @@ double Polygon::place() const {
 		res += (p1.x - p2.x) * (p1.y + p2.y);
 	}
 	return fabs(res) / 2;
+}
+
+double Polygon::perimetr() const {
+	double ans;
+	Point nextPoint;
+	for (size_t i = 0; i < pVector.size(); i++)
+	{
+		if (i != pVector.size() - 1)
+			 nextPoint = pVector[i + 1];
+		else
+			 nextPoint = pVector[0];
+
+		ans += sqrt(pow((pVector[i].x - nextPoint.x), 2) + pow((pVector[i].y - nextPoint.y), 2));
+	}
+
+	return ans;
 }

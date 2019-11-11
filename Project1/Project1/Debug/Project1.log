@@ -1,5 +1,27 @@
-﻿  figures.cpp
-  Source.cpp
-  Создание кода...
+﻿  Source.cpp
 C:\Users\nbykov\source\repos\Modern-problems-of-computer-science-and-computer-engineering\Project1\Project1\Source.cpp(10,13): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
-  Project1.vcxproj -> C:\Users\nbykov\source\repos\Modern-problems-of-computer-science-and-computer-engineering\Project1\Debug\Project1.exe
+  figures.cpp
+C:\Users\nbykov\source\repos\Modern-problems-of-computer-science-and-computer-engineering\Project1\Project1\Source.cpp(29,25): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\nbykov\source\repos\Modern-problems-of-computer-science-and-computer-engineering\Project1\Project1\figures.h(33,14): error C2039: ostream: не является членом "std"
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\vector(20): message : см. объявление "std"
+C:\Users\nbykov\source\repos\Modern-problems-of-computer-science-and-computer-engineering\Project1\Project1\figures.h(33,21): error C2143: синтаксическая ошибка: отсутствие ";" перед "&"
+C:\Users\nbykov\source\repos\Modern-problems-of-computer-science-and-computer-engineering\Project1\Project1\figures.h(33,21): error C2433: ostream: "friend" не разрешается для объявлений данных
+C:\Users\nbykov\source\repos\Modern-problems-of-computer-science-and-computer-engineering\Project1\Project1\figures.h(33,21): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+C:\Users\nbykov\source\repos\Modern-problems-of-computer-science-and-computer-engineering\Project1\Project1\figures.h(33,40): error C2039: ostream: не является членом "std"
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\vector(20): message : см. объявление "std"
+C:\Users\nbykov\source\repos\Modern-problems-of-computer-science-and-computer-engineering\Project1\Project1\figures.h(33,75): error C2238: непредвиденные лексемы перед ";"
+C:\Users\nbykov\source\repos\Modern-problems-of-computer-science-and-computer-engineering\Project1\Project1\figures.cpp(17,39): error C2248: Circle::center: невозможно обратиться к private член, объявленному в классе "Circle"
+C:\Users\nbykov\source\repos\Modern-problems-of-computer-science-and-computer-engineering\Project1\Project1\figures.h(26): message : см. объявление "Circle::center"
+C:\Users\nbykov\source\repos\Modern-problems-of-computer-science-and-computer-engineering\Project1\Project1\figures.h(25): message : см. объявление "Circle"
+C:\Users\nbykov\source\repos\Modern-problems-of-computer-science-and-computer-engineering\Project1\Project1\figures.cpp(17,68): error C2248: Circle::center: невозможно обратиться к private член, объявленному в классе "Circle"
+C:\Users\nbykov\source\repos\Modern-problems-of-computer-science-and-computer-engineering\Project1\Project1\figures.h(26): message : см. объявление "Circle::center"
+C:\Users\nbykov\source\repos\Modern-problems-of-computer-science-and-computer-engineering\Project1\Project1\figures.h(25): message : см. объявление "Circle"
+C:\Users\nbykov\source\repos\Modern-problems-of-computer-science-and-computer-engineering\Project1\Project1\figures.cpp(17,95): error C2248: Circle::rad: невозможно обратиться к private член, объявленному в классе "Circle"
+C:\Users\nbykov\source\repos\Modern-problems-of-computer-science-and-computer-engineering\Project1\Project1\figures.h(27): message : см. объявление "Circle::rad"
+C:\Users\nbykov\source\repos\Modern-problems-of-computer-science-and-computer-engineering\Project1\Project1\figures.h(25): message : см. объявление "Circle"
+C:\Users\nbykov\source\repos\Modern-problems-of-computer-science-and-computer-engineering\Project1\Project1\figures.cpp(17,125): error C2248: Figure::color: невозможно обратиться к private член, объявленному в классе "Figure"
+C:\Users\nbykov\source\repos\Modern-problems-of-computer-science-and-computer-engineering\Project1\Project1\figures.h(9): message : см. объявление "Figure::color"
+C:\Users\nbykov\source\repos\Modern-problems-of-computer-science-and-computer-engineering\Project1\Project1\figures.h(8): message : см. объявление "Figure"
+C:\Users\nbykov\source\repos\Modern-problems-of-computer-science-and-computer-engineering\Project1\Project1\figures.cpp(39,23): warning C4018: <: несоответствие типов со знаком и без знака
+  Создание кода...
+C:\Users\nbykov\source\repos\Modern-problems-of-computer-science-and-computer-engineering\Project1\Project1\figures.cpp(39,31): warning C4552: "+": результат выражения не используется
