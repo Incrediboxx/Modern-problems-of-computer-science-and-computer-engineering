@@ -32,13 +32,14 @@ double Triangle::perimetr() const {
 		+ sqrt(pow((p3.x - p1.x), 2) + pow((p3.y - p1.y), 2));
 }
 
-
-
+// ѕо отладке на бумаге выходит что последни€ точка не 
+// ну попробуйте так тода
 
 Polygon::Polygon(int pArray[],int n, int color): Figure(color) {
-	for (size_t i = 0; i < n-2; i+2)
+	for (size_t i = 0; i < n-1; i+=2)
 	{
-		pVector.push_back(Point(pArray[i], pArray[i + 1]));
+		//std::cout << "n: " << n << "; i: " << i << std::endl;
+		pVector.emplace_back(pArray[i], pArray[i + 1]);
 	}
 }
 double Polygon::place() const {
@@ -58,7 +59,7 @@ double Polygon::place() const {
 }
 
 double Polygon::perimetr() const {
-	double ans;
+	double ans = 0;
 	Point nextPoint;
 	for (size_t i = 0; i < pVector.size(); i++)
 	{

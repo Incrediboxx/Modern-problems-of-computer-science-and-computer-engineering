@@ -16,7 +16,7 @@ void main() {
 	std::vector<Figure*> figures(nFigures);
 	for (size_t i = 0; i < nFigures; i++)
 	{
-		int var = rand() % 3;
+		int var = rand() % 1;
 		switch (var) {
 		case 0:
 			figures[i] = new Circle(Figure::Point(rand() % 100, rand() % 100), rand() % 100 + 1, rand() % 100);
@@ -24,14 +24,16 @@ void main() {
 			figures[i] = new Triangle(Figure::Point(rand() % 100, rand() % 100), Figure::Point(rand() % 100, rand() % 100),
 				Figure::Point(rand() % 100, rand() % 100), rand() % 100);
 		case 2:
-			int n = rand() % 6;
-			int arr[12];
-			for (size_t i = 0; i < n*2; i++)
+		{
+			int n = rand() % 6 + 3;
+			int* arr = new int[n * 2];
+			for (size_t i = 0; i < n * 2; i++)
 			{
 				arr[i] = rand() % 100;
 			}
 
 			figures[i] = new Polygon(arr, n, rand() % 100);
+		}
 		}
 		
 	}

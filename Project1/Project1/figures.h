@@ -1,11 +1,13 @@
 #pragma once
 
+#include <iostream>
 #include <vector>
 
 #ifndef __FIGURES_H		
 #define __FIGURES_H	
 
 class Figure {
+protected:
 	int color;
 public:
 	Figure(int color) : color(color) {};
@@ -23,6 +25,7 @@ public:
 };
 
 class Circle : public Figure {
+protected:
 	Point center;
 	int rad;
 public:
@@ -34,6 +37,7 @@ public:
 };
 
 class Triangle : public Figure {
+protected:
 	Point	p1, p2, p3;
 public:	
 	Triangle(Point p1, Point p2, Point p3, int color);
@@ -42,6 +46,7 @@ public:
 };
 
 class Polygon : public Figure {
+protected:
 	std::vector<Point> pVector;
 public:
 	Polygon(int pArray[],int n, int color);
